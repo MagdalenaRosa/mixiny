@@ -1,0 +1,15 @@
+@mixin main($color: rgb(47, 210, 58), $size-border: 1px, $border-type: solid) {
+  border: $color $size-border $border-type;
+}
+@mixin rozmiar {
+  height: 200px;
+  width: 300px;
+}
+div {
+  @include rozmiar();
+  @include main();
+}
+p {
+  @include rozmiar();
+  @include main(blue, 2px);
+}
